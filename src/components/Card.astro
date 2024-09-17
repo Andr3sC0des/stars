@@ -1,0 +1,57 @@
+---
+const { 
+  title="Manage in real time", 
+  image="/images/real-time.svg", 
+  description ="Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+} = Astro.props
+---
+
+<section class="card">
+  <div class="imagecontainer">
+    <img class="image" src={image} alt="">
+  </div>
+  <div class="content">
+    <h3 class="title">{title}</h3>
+    <p class="description">{description}</p>
+  </div>
+</section>
+
+<style>
+  .card {
+    background: #101013;
+    border: 1px solid #ffffff1f;
+    border-radius: 1rem;
+    --card-padding: 2rem;
+    width: 100%;
+  }
+  .imagecontainer {
+    padding: var(--card-padding);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    mask-image: linear-gradient(black 30%, transparent);
+    aspect-ratio: 340 / 300;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .title {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .description {
+    color: rgba(161, 161, 170, 0.8);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 1rem;
+    text-wrap: balance;
+  }
+  .content {
+    padding: var(--card-padding);
+  }
+</style>

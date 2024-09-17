@@ -1,0 +1,63 @@
+---
+const {
+  title = "Lorem ipsum imet",
+  href = "#",
+  type = "button",
+} = Astro.props;
+---
+
+{
+  type === "button" ? (
+    <button class="btn">{title}</button>
+  ) : (
+    <a href={href} class="btn">
+      {title}
+      <span class="deco" />
+    </a>
+  )
+}
+
+<script>
+  const $btn = document.querySelector(".btn");
+
+  $btn.addEventListener("click", () => {
+    window.dispatchEvent(new Event("startScroll"));
+  });
+</script>
+
+<style>
+  .btn {
+    position: relative;
+    border: 1px solid #ffffff1f;
+    display: block;
+    background: #000;
+    color: rgb(161, 161, 170);
+    border-radius: 3rem;
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .btn:hover {
+    box-shadow: 0 0 10px rgb(0, 204, 255);
+  }
+  .deco {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      to right,
+      #ffffff1f,
+      rgb(0, 204, 255),
+      #ffffff1f
+    );
+    height: 1px;
+    width: 70%;
+    z-index: 3000;
+    border-radius: 1rem;
+  }
+</style>

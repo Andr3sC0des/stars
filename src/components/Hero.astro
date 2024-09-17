@@ -1,0 +1,60 @@
+---
+import DownArrowIcon from "../icons/DownArrowIcon.astro";
+import BlackButton from "./BlackButton.astro";
+import Typography from "../layouts/Typography.astro";
+---
+
+<section class="hero">
+  <Typography>Lorem ipsum dolor, sit amet consectetur adipisicing</Typography>
+  <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non expedita consequatur harum facere, at perspiciatis aliquam inventore aperiam</p>
+  <BlackButton title="Lorem ipsum imet" />
+  <a class="more" href="">
+    <span>Learn more</span>
+    <i class="icon">
+      <DownArrowIcon />
+    </i>
+  </a>
+</section>
+
+<style>
+  .hero {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .description {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--gray-color)
+  }
+  .more {
+    font-size: 14px;
+    color: var(--gray-color);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .more:hover {
+    color: var(--main-color);
+  }
+  .more:hover > .icon {
+    transform: translateY(5px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (width <= 768px)  {
+    .hero {
+      padding: 0rem 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import BlackButton from "./BlackButton.astro";
+---
+
+<nav class="navbar">
+  <a class="logo" href="/">
+    <img class="image" src="/logo.png" alt="">
+  </a>
+  <ul class="menu">
+    <li class="item">
+      <a href="" class="link">
+        Blog
+      </a>
+    </li>
+    <li class="item">
+      <BlackButton type="button" title="Lorem ipsum imet" />
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .logo {
+    display: block;
+    height: 100%;
+  }
+  .navbar {
+    height: var(--navbar-height);
+    width: 100%;
+    padding: 0rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  .image {
+    max-width: 90px;
+    height: 100%;
+  }
+  .menu {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .link {
+    display: block;
+    font-size: 14px;
+    padding: 1rem;
+    color: #fff;
+  }
+
+  @media (width <= 768px) {
+    .navbar {
+      padding: 0rem 2rem;
+    }
+    .menu {
+      gap: 0rem;
+    }
+  }
+</style>

@@ -1,0 +1,41 @@
+<canvas class="stars"></canvas>
+
+<script src="particles.min.js" is:inline></script>
+<script>
+window.onload = function() {
+	const OPTIONS = {
+		selector: '.stars',
+		color: '#48F2E3',
+		maxParticles: 200,
+		responsive: [
+			{
+				breakpoint: 768,
+				options: {
+					maxParticles: 100,
+					color: '#48F2E3',
+					connectParticles: false
+				}
+			}, {
+				breakpoint: 425,
+				options: {
+					maxParticles: 50
+				}
+			}
+  	] 	
+	}
+	// @ts-ignore
+	Particles.init(OPTIONS);
+}; 
+</script>
+
+
+<style>
+  .stars {
+  	position:  absolute;
+  	display:  block;
+  	top: 400px;
+		height: 100%;
+  	left: 0;
+  	z-index: -1;
+	} 
+</style>

@@ -1,0 +1,30 @@
+---
+import BlackButton from "../components/BlackButton.astro";
+import Typography from "../layouts/Typography.astro";
+
+
+
+---
+
+<section class="info">
+  <Typography Tag="h2">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit</Typography>
+  <Typography Tag="p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Typography>
+  <BlackButton title="Lorem ipsum imet" />
+</section>
+
+<style>
+  .info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 8rem 0;
+  }
+  @media (width <= 768px) {
+    .info {
+      padding: 8rem 2rem;
+    }
+  }
+</style>

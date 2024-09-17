@@ -1,0 +1,192 @@
+---
+import Stars from "../components/Stars.astro";
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Typography from "../layouts/Typography.astro";
+import Footer from "../components/Footer.astro";
+import Info from "../sections/Info.astro";
+---
+
+<Layout title="Lorem ipsum dolor, sit amet consectetur adipisicing ">
+  <div class="overlay"></div>
+  <Hero />
+  <img class="image" src="/images/dashboard.webp" alt="" />
+  <section class="info">
+    <Typography Tag="h2">Lorem ipsum dolor sit amet consectetur</Typography>
+    <Typography Tag="p"
+      >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit inventore repellat doloribus maiores obcaecati adipisci quos est ipsum, iste laudantium ea, illum nesciunt. Deleniti ea iure recusandae odit reiciendis placeat? <span
+        class="highlight"
+        >Lorem ipsum dolor sit amet consectetur.</span
+      ></Typography
+    >
+  </section>
+  <section class="info">
+    <div>
+      <Typography Tag="h2">Lorem ipsum dolor sit amet consectetur</Typography>
+      <Typography Tag="p"
+        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque perferendis ut placeat voluptas optio porro ipsum cum, repellendus omnis delectus tenetur dolore explicabo neque ratione nulla excepturi aliquid natus quam.</Typography
+      >
+    </div>
+    <div></div>
+  </section>
+  <section class="cards">
+    <article class="cardsgrid">
+      <Card
+        title="Lorem ipsum dolor sit amet"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355210/Assets/z5jvubg5dsxvqejcd2qj.webp"
+      />
+      <Card
+        title="Lorem ipsum dolor sit amet"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355210/Assets/jrvtec82k5fqxs1ju5pt.webp"
+      />
+      <Card
+        title="Lorem ipsum dolor sit amet"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355483/Assets/pexels-weekendplayer-93820_qngdbe.webp"
+      />
+    </article>
+    <article class="cardsgrid">
+      <Card
+        title="Lorem ipsum dolor sit amet"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355210/Assets/hefvwan2jwemjsreapym.jpg"
+      />
+      <Card
+        title="Lorem ipsum dolor sit amet"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355208/Assets/boshuiwhal74vxyozcjp.webp"
+      />
+    </article>
+  </section>
+  <section class="info">
+    <div>
+      <Typography Tag="h2">Lorem ipsum</Typography>
+      <Typography Tag="p"
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        and <span class="highlight">Esse vitae quasi </span> temporibus officia, odit</Typography
+      >
+    </div>
+    <div></div>
+  </section>
+  <section class="cards">
+    <article class="cardsgrid">
+      <Card
+        title="Lorem ipsum dolor"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355211/Assets/ush9fp1gk8fdpldv709c.webp"
+      />
+      <Card
+        title="Lorem ipsum dolor"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae quasi temporibus officia, odit"
+        image="https://res.cloudinary.com/dbihhif3d/image/upload/v1722355211/Assets/vj2qqtyjb1rmwuzcpqxs.webp"
+      />
+    </article>
+  </section>
+  <Stars />
+  <div class="footeroverlay">
+    <div></div>
+  </div>
+  <Info />
+  <Footer />
+</Layout>
+
+<script>
+  import automaticScroll  from "../lib/automaticScroll.js";
+  automaticScroll()
+</script>
+
+<style>
+  .cards {
+    margin: 65px 0;
+  }
+  .highlight {
+    color: #fff;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 200px;
+    gap: 85px;
+  }
+  .cardsgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    padding: 0rem 2rem;
+    margin: 1rem auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: var(--background-image);
+    height: 1600px;
+    width: 100%;
+    z-index: -1;
+  }
+  .image {
+    width: 1000px;
+    border-radius: 1rem;
+    display: block;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+  .footeroverlay {
+    filter: blur(64px);
+  }
+  .footeroverlay div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 500px;
+    width: 100%;
+    z-index: -1;
+    clip-path: polygon(
+      77.5% 40.13%,
+      90% 10%,
+      100% 50%,
+      95% 80%,
+      92% 85%,
+      75% 65%,
+      61.26% 54.7%,
+      50% 54.7%,
+      47.24% 65.81%,
+      50% 85%,
+      26.16% 73.91%,
+      0.1% 100%,
+      1% 40.13%,
+      20% 48.75%,
+      60% 0.25%,
+      67.5% 32.63%
+    );
+    background-image: linear-gradient(
+      to right,
+      rgb(6, 182, 212),
+      rgb(30, 64, 175)
+    );
+    opacity: 0.2;
+  }
+
+  @media (max-width: 1000px) {
+    .image {
+      width: 100%;
+    }
+    .info {
+      display: block;
+      margin: 6rem auto;
+    }
+    .cardsgrid {
+      padding: 2rem;
+    }
+  }
+</style>

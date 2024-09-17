@@ -1,0 +1,78 @@
+---
+import DownArrowIcon from "../icons/DownArrowIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+import TwitterIcon from "../icons/TwitterIcon.astro";
+import Typography from "../layouts/Typography.astro";
+
+
+---
+
+<footer class="footer">
+  <div class="info">
+    <div class="item">2024 - Lorem ipsum dolor consectetur</div>
+    <div class="flex">
+      <a href="/privacy" class="item">Privacy Policy</a>
+      <a href="/terms" class="item">Terms of Use</a>
+    </div>
+  </div>
+  <div class="social">
+    <a class="icon" href="#"><TwitterIcon /></a>
+    <a class="icon" href="#"><GithubIcon /></a>
+    <a class="icon" href="#"><LinkedinIcon width="26" height="26" /></a>
+  </div>
+</footer>
+
+<style>
+  .flex {
+    display: flex;
+  }
+  .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: rgb(161, 161, 170);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    border-top: 1px solid rgba(161, 161, 170, 0.192);
+    padding: 1rem 2rem;
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .item {
+    display: block;
+    padding: 1rem 0.5rem;
+  }
+  .icon:hover, .item:hover {
+    transition: 0.5s;
+    color: #fff;
+  }
+  @media (width <= 768px ){
+    .footer {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .info {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .social {
+      padding: 0.5rem;
+    }
+    .item {
+      padding: 0.5rem;
+    }
+  }
+</style>

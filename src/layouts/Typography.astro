@@ -1,0 +1,59 @@
+---
+const { Tag="h1", ...props } = Astro.props
+
+const variantClasses = {
+  "h1": "title",
+  "h2": "subtitle",
+  "h3": "info",
+  "p": "description"
+}
+
+const classes = variantClasses[Tag]
+---
+
+<Tag class:list={classes} {...props}>
+  <slot />
+</Tag>
+
+<style>
+  .title {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#f3f3f3, #8b8b93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .subtitle {
+    font-size: 48px;
+    background: -webkit-linear-gradient(#f3f3f3, #8b8b93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+  .subtitle {
+    font-size: 32px;
+    background: -webkit-linear-gradient(#f3f3f3, #8b8b93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+  .description {
+    color: rgba(161, 161, 170, 0.8);
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 800px;
+    text-wrap: balance;
+  }
+
+  @media (width <= 768px)  {
+   .title {
+    font-size: 48px;
+   } 
+   .description {
+    font-size: 18px;
+   }
+  }
+</style>
