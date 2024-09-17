@@ -28,7 +28,7 @@ Landing page created with Astro
 
 ## Preview
 
-If you want to see working demo of the application ...
+If you want to see working demo of the application https://stars-beta-gold.vercel.app/
 
 ## Getting Started
 
